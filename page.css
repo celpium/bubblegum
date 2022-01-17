@@ -9,6 +9,8 @@ body, h1, h2, h3, h4, h5, h6, input, textarea, select{font-family: 'Noto Sans KR
 @import url('https://fonts.googleapis.com/css?family=Noto+Sans+KR&display=swap');
 * {
     box-sizing: border-box;
+    
+    border: 1px solid green;
 }
 body{
     margin: 0px;
@@ -46,12 +48,10 @@ p{
     column-gap: 2px;
     column-rule: 2px solid black;
 }
-@media(max-width: 800px){
+@media(max-width: 659px){
     body{
-        width: 800px;
+        width: 100vh;
     }
-}
-@media(max-width: 1200px){
     #col{
         column-count: 1;
     }
