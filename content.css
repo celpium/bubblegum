@@ -1,0 +1,67 @@
+@font-face{
+    font-family: "Noto Sans KR"; font-style: normal; font-weight: 100; src: url(./font/NotoSansKR-Thin.otf) format("opentype");
+}
+@font-face{
+    font-family: "Noto Sans KR"; font-style: normal; font-weight: 200; src: url(./font/NotoSansKR-Light.otf) format("opentype");
+}
+@font-face{
+    font-family: "Noto Sans KR"; font-style: normal; font-weight: 400; src: url(./font/NotoSansKR-Regular.otf) format("opentype");
+}
+@font-face{
+    font-family: "Noto Sans KR"; font-style: normal; font-weight: 500; src: url(./font/NotoSansKR-Midium.otf) format("opentype");
+}
+@font-face{
+    font-family: "Noto Sans KR"; font-style: normal; font-weight: 700; src: url(./font/NotoSansKR-Bold.otf) format("opentype");
+}
+@font-face{
+    font-family: "Noto Sans KR"; font-style: normal; font-weight: 900; src: url(./font/NotoSansKR-Black.otf) format("opentype");
+}
+*{
+    font: 500 14pt "Noto Sans KR", sans-serif;
+}
+body{
+    margin: 0px;
+}
+nav{
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+    display: flex;
+}
+h1{
+    margin: 0px;
+    width: 240px;
+    height: 32px;
+    padding-right: 8%;
+}
+input.indexToggle{
+    margin: 4px 6px 0px 12px;
+    width: 20px;
+    height: 20px;
+    border: none;
+    background: url(./image/bubble.png) no-repeat;
+    background-size: 20px;
+    background-position: center;
+    color: transparent;
+}
+ul{
+    margin: 0px;
+    padding: 0px;
+}
+.nav:nth-child(3){
+    width: 120px;
+    padding-right: 16.67%;
+}
+li{
+    list-style: none;
+    height: 32px;
+    box-sizing: border-box;
+}
+li.line{
+    border-top: 2px solid black;
+}
+li.this{
+    border: none;
+}
+li:not(.this){
+    display: none;
+}
