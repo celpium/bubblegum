@@ -16,206 +16,160 @@
 @font-face{
     font-family: "Noto Sans KR"; font-style: normal; font-weight: 900; src: url(./font/NotoSansKR-Black.otf) format("opentype");
 }
-@font-face{
-    font-family: "KoPubWorld Dotum Pro"; font-style: normal; font-weight: 200; src: url(KoPubWorld_Dotum_Pro_Light.otf) format("opentype");
+body{
+    margin: 0rem;
 }
-@font-face{
-    font-family: "KoPubWorld Dotum Pro"; font-style: normal; font-weight: 500; src: url(KoPubWorld_Dotum_Pro_Medium.otf) format("opentype");
+@media(min-width: 981px){
+    html, h1, p, li{
+        font: 500 24px "Noto Sans KR", sans-serif;
+        line-height: 1.6rem;
+    }
 }
-@font-face{
-    font-family: "KoPubWorld Dotum Pro"; font-style: normal; font-weight: 700; src: url(KoPubWorld_Dotum_Pro_Bold.otf) format("opentype");
+@media(max-width: 980px){
+    html, h1, p, li{
+    font: 500 36px "Noto Sans KR", sans-serif;
+    line-height: 1.6rem;
+    }
 }
-/* @media(max-width: 980px){ */
-    body{
-        margin: 0;
-    }
-    html, body, h1, p, ul, li{
-        font: 500 30px "Noto Sans KR", sans-serif;
-        line-height: 48px;
-    }
-    nav, div.title, ul.author, ul.next-prev, p{
-        display: flex;
-        flex-wrap: wrap;
-    }
-    nav{
-        position: fixed;
-        top: 0;
-        width: 100%;
-        height: 3rem;
-        border-top: 0.1rem solid black;
-        border-bottom: 0.1rem solid black;
-        background-color: white;
-    }
-    input.indexToggle{
-        width: 36px;
-        height: 36px;
-        margin: 0.86rem 0.1rem 0.94rem 1.5rem;
-        border: none;
-        color: transparent;
-        background: url(./image/bubble.png) no-repeat;
-        background-size: 30px;
-        background-position: center;
-    }
-    h1{
-        width: 3rem;
-        padding: 0.6rem 0.8rem 0.8rem 0.8rem;
-        margin: 0;
-    }
-    /* ul.index{
-        display: flex;
-        flex-direction: y;
-        flex-wrap: wrap;
-    } */
-    ul{
-        padding: 0;
-        margin: 0;
-    }
-    li{
-        padding: 0rem 0.4rem;
-        list-style: none;
-    }
-    ul.author{
-        padding: 0.6rem 0rem 0.8rem 0rem;
-        border-top: 0.1rem solid black;
-    }
-    /* ul:not(.this), li:not(.this){
-        display: none;
-    } */
-    ul.author:first-child, ul.author.this{
-        border-top: none;
-    }
-    li.author{
-        width: 3rem;
-    }
-    li.work{
-        width: 16rem;
-    }
-    ul.next-prev{
-        position: absolute;
-        right: 0.8rem;
-        padding: 0.6rem 0rem 0.8rem 0rem;
-    }
-    div.content{
-        margin-top: 3.2rem;
-    }
-    p{
-        padding: 0rem 1.6rem;
-        margin: 0;
-        text-indent: 1.6rem;
-        word-break: keep-all;
-    }
-    div.marginMobile{
-        height: 0.8rem;
-    }
-    div.marginPC{
-        display: none;
-    }
-    p.asterisk{
-        flex-direction: y;
-        justify-content: space-around;
-        text-align: center;
-        text-indent: 0;
-    }
-    span.bracket{
-        font: 700 1.6rem "KoPubWorld Dotum pro", sans-serif;
-    }
-/* } */
-/* body{
-    margin: 0;
-}
-nav, div.title, ul.author, ul.next-prev{
+nav, div.title, ul.author, ul.next-prev, p{
     display: flex;
-    flex-wrap: wrap;
 }
 nav{
-    height: 5vh;
-    border-top: 0.25vh solid black;
-    border-bottom: 0.25vh solid black;
+    position: fixed;
+    top: 0rem;
+    width: 100%;
+    height: 2.2rem;
+    border-top: 0.1rem solid black;
+    border-bottom: 0.1rem solid black;
+    background-color: white;
 }
-
+input.indexToggle{
+    width: 1.6rem;
+    height: 1.6rem;
+    padding: 0rem;
+    margin: 0.24rem 0rem 0.36rem 1rem;
+    border: none;
+    color: transparent;
+    background: url(./image/bubble.png) no-repeat;
+    background-size: 1.2rem;
+    background-position: center;
+}
 h1{
-    width: 6vh;
-    height: 3vh;
-    padding: 0.25vh 0vw 0.25vh 0vw;
-    margin: 0.75vh 0.5vw 0.75vh 0.5vw;
-    font: 500 2vh "Noto Sans KR", sans-serif;
-}
-ul{
-    padding: 0;
-    margin: 0;
+    height: 1.6rem;
+    padding: 0rem;
+    margin: 0.24rem 0.4rem 0.36rem 0.4rem;
+    word-break: keep-all;
+    overflow: hidden;
 }
 li{
-    height: 3vh;
-    padding: 0.25vh 0vw 0.25vh 0vw;
+    padding: 0rem;
+    margin: 0rem 0.4rem;
     list-style: none;
-    font: 500 2vh "Noto Sans KR", sans-serif;
+    word-break: keep-all;
+    overflow: hidden;
+}
+ul{
+    padding: 0rem;
+    margin: 0rem;
+    overflow: hidden;
 }
 ul.author{
-    width: 48vh;
-    padding: 0.5vh 0vw 0.75vh 0vw;
-    border-top: 0.25vh solid black;
+    padding: 0.24rem 0rem 0.36rem 0rem;
+    border-top: 0.1rem solid black;
 }
 ul.author:first-child{
-    border-top: 0.25vh solid transparent;
-}
-ul.author.this{
-    border-top: 0.25vh solid transparent;
-}
-li.author{
-    width: 6vh;
-    margin: 0vh 0.5vw;
-}
-li.work{
-    width: 31.25vh;
-    margin: 0vh 0.5vw;
-}
-ul.next-prev{
-    position: absolute;
-    right: 0vw;
-    margin: 0.75vh 0.5vw 0.75vh 0.5vw;
-}
-li.next-prev{
-    padding: 0.25vh 1vw 0.25vh 1vw;
+    border-top: none;
 }
 ul:not(.this), li:not(.this){
     display: none;
 }
-
+ul.author.this{
+    border-top: none;
+}
+@media(min-width: 981px){
+    ul.next-prev{
+        position: absolute;
+        right: 0.4rem;
+        padding: 0.24rem 0rem 0.36rem 0rem;
+    }
+}
+@media(max-width: 980px){
+    ul.next-prev{
+        position: fixed;
+        bottom: 0.8rem;
+        right: 1.2rem;
+        border-radius: 1rem;
+        border: 0.1rem solid black;
+        background-color: white;
+    }
+    li.next-prev{
+        width: 1.6rem;
+        height: 1.8rem;
+        text-align: center;
+    }
+    li.next-prev:nth-child(1){
+        margin: 0rem 0.4rem 0rem 0rem ;
+    }
+    li.next-prev:nth-child(2){
+        margin: 0rem 0rem 0rem 0.4rem ;
+    }
+}
 p{
-    padding: 0;
-    margin: 0vh 2.5vh;
+    padding: 0rem 1.2rem;
+    margin: 0rem;
+    text-indent: 1.6rem;
     word-break: keep-all;
-    font: 500 2vh "Noto Sans KR", sans-serif;
-    line-height: 3.5vh;
-    text-indent: 3vh;
-}
-div.marginPC{
-    height: 0.5vh;
-}
-div.content{
-    height: 93.5vh;
-}
-div.content, div.grid{
-    column-width: 450px;
-    column-gap: 0.25vh;
-    column-rule: 0.25vh solid rgb(10, 10, 10);
-    overflow-x: scroll;
-    -ms-overflow-style: none;
-}
-div.content::-webkit-scrollbar, div.grid::-webkit-scrollbar {
-    display: none;
-}
-p.bracket{
-    text-indent: 0.75vh;
 }
 p.asterisk{
+    flex-direction: column;
     text-align: center;
-    text-indent: 0;
-}
-span.bracket{
-    letter-spacing: -1vh;
+    text-indent: 0rem;
 }
 ::selection{
     color: lightpink;
 }
- */
+@media(max-width: 1200px){
+    div.marginPC{
+        display: none;
+    }
+    div.marginMobile{
+        height: 0.24rem;
+    }
+    div.content{
+        margin-top: 2.4rem;
+    }
+    input.indexToggle{
+        filter: none;
+    }
+}
+@media(min-width: 1201px){
+    div.marginMobile{
+        display: none;
+    }
+    div.marginPC{
+        height: 3.12rem;
+        column-width: 600px;
+        column-gap: 0;
+        column-rule: 0.1rem solid black;
+        overflow-x: scroll;
+        -ms-overflow-style: none;
+    }
+    div.content{
+        height: calc(100vh - 3.12rem);
+        margin: 0rem;
+        column-width: 600px;
+        column-gap: 0;
+        column-rule: 0.1rem solid black;
+        overflow-x: scroll;
+        -ms-overflow-style: none;
+    }
+    div.content::-webkit-scrollbar, div.marginPC::-webkit-scrollbar{
+        display: none;
+    }
+    input.indexToggle{
+        filter: grayscale(100%);
+    }
+    input.indexToggle:hover{
+        filter: none;
+    }
+}
