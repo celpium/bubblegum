@@ -8,7 +8,7 @@
     font-family: "Noto Sans KR"; font-style: normal; font-weight: 400; src: url(./font/NotoSansKR-Regular.otf) format("opentype");
 }
 @font-face{
-    font-family: "Noto Sans KR"; font-style: normal; font-weight: 500; src: url(./font/NotoSansKR-Midium.otf) format("opentype");
+    font-family: "Noto Sans KR"; font-style: normal; font-weight: 500; src: url(./font/NotoSansKR-Medium.otf) format("opentype");
 }
 @font-face{
     font-family: "Noto Sans KR"; font-style: normal; font-weight: 700; src: url(./font/NotoSansKR-Bold.otf) format("opentype");
@@ -16,52 +16,201 @@
 @font-face{
     font-family: "Noto Sans KR"; font-style: normal; font-weight: 900; src: url(./font/NotoSansKR-Black.otf) format("opentype");
 }
-*{
-    font: 500 14pt "Noto Sans KR", sans-serif;
+@font-face{
+    font-family: "KoPubWorld Dotum Pro"; font-style: normal; font-weight: 200; src: url(KoPubWorld_Dotum_Pro_Light.otf) format("opentype");
 }
-body{
-    margin: 0px;
+@font-face{
+    font-family: "KoPubWorld Dotum Pro"; font-style: normal; font-weight: 500; src: url(KoPubWorld_Dotum_Pro_Medium.otf) format("opentype");
+}
+@font-face{
+    font-family: "KoPubWorld Dotum Pro"; font-style: normal; font-weight: 700; src: url(KoPubWorld_Dotum_Pro_Bold.otf) format("opentype");
+}
+@media(max-width: 980px){
+    body{
+        margin: 0;
+    }
+    body, h1, p, ul, li{
+        font: 500 1.6rem "Noto Sans KR", sans-serif;
+        line-height: 2.8rem;
+    }
+    nav, div.title, ul.author, ul.next-prev, p{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    nav{
+        position: fixed;
+        top: 0;
+        width: 100%;
+        height: 4.18rem;
+        border-top: 0.2rem solid black;
+        border-bottom: 0.2rem solid black;
+        background-color: white;
+    }
+    input.indexToggle{
+        width: 1.6rem;
+        height: 1.6rem;
+        margin: 1.28rem 0.4rem 1.3rem 2rem;
+        border: none;
+        color: transparent;
+        background: url(./image/bubble.png) no-repeat;
+        background-size: 1.6rem;
+        background-position: center;
+    }
+    h1{
+        width: 4.8rem;
+        padding: 0.6rem 0.8rem 0.8rem 0.8rem;
+        margin: 0;
+    }
+    ul{
+        padding: 0;
+        margin: 0;
+    }
+    li{
+        padding: 0rem 0.8rem;
+        list-style: none;
+    }
+    ul.author{
+        padding: 0.6rem 0rem 0.8rem 0rem;
+        border-top: 0.2rem solid black;
+    }
+    ul:not(.this), li:not(.this){
+        display: none;
+    }
+    ul.author:first-child, ul.author.this{
+        border-top: none;
+    }
+    li.author{
+        width: 4.8rem;
+    }
+    li.work{
+        width: 26.82rem;
+    }
+    ul.next-prev{
+        position: absolute;
+        right: 1.2rem;
+        padding: 0.6rem 0rem 0.8rem 0rem;
+    }
+    div.content{
+        margin-top: 4.58rem;
+    }
+    p{
+        padding: 0rem 2rem;
+        margin: 0;
+        text-indent: 2rem;
+        word-break: keep-all;
+    }
+    div.marginMobile{
+        height: 0.8rem;
+    }
+    div.marginPC{
+        display: none;
+    }
+    p.asterisk{
+        flex-direction: y;
+        justify-content: space-around;
+        text-align: center;
+        text-indent: 0;
+    }
+    span.bracket{
+        font: 700 1.6rem "KoPubWorld Dotum pro", sans-serif;
+    }
+}
+/* body{
+    margin: 0;
+}
+nav, div.title, ul.author, ul.next-prev{
+    display: flex;
+    flex-wrap: wrap;
 }
 nav{
-    border-top: 2px solid black;
-    border-bottom: 2px solid black;
-    display: flex;
+    height: 5vh;
+    border-top: 0.25vh solid black;
+    border-bottom: 0.25vh solid black;
 }
+
 h1{
-    margin: 0px;
-    width: 240px;
-    height: 32px;
-    padding-right: 8%;
-}
-input.indexToggle{
-    margin: 4px 6px 0px 12px;
-    width: 20px;
-    height: 20px;
-    border: none;
-    background: url(./image/bubble.png) no-repeat;
-    background-size: 20px;
-    background-position: center;
-    color: transparent;
+    width: 6vh;
+    height: 3vh;
+    padding: 0.25vh 0vw 0.25vh 0vw;
+    margin: 0.75vh 0.5vw 0.75vh 0.5vw;
+    font: 500 2vh "Noto Sans KR", sans-serif;
 }
 ul{
-    margin: 0px;
-    padding: 0px;
-}
-.nav:nth-child(3){
-    width: 120px;
-    padding-right: 16.67%;
+    padding: 0;
+    margin: 0;
 }
 li{
+    height: 3vh;
+    padding: 0.25vh 0vw 0.25vh 0vw;
     list-style: none;
-    height: 32px;
-    box-sizing: border-box;
+    font: 500 2vh "Noto Sans KR", sans-serif;
 }
-li.line{
-    border-top: 2px solid black;
+ul.author{
+    width: 48vh;
+    padding: 0.5vh 0vw 0.75vh 0vw;
+    border-top: 0.25vh solid black;
 }
-li.this{
-    border: none;
+ul.author:first-child{
+    border-top: 0.25vh solid transparent;
 }
-li:not(.this){
+ul.author.this{
+    border-top: 0.25vh solid transparent;
+}
+li.author{
+    width: 6vh;
+    margin: 0vh 0.5vw;
+}
+li.work{
+    width: 31.25vh;
+    margin: 0vh 0.5vw;
+}
+ul.next-prev{
+    position: absolute;
+    right: 0vw;
+    margin: 0.75vh 0.5vw 0.75vh 0.5vw;
+}
+li.next-prev{
+    padding: 0.25vh 1vw 0.25vh 1vw;
+}
+ul:not(.this), li:not(.this){
     display: none;
 }
+
+p{
+    padding: 0;
+    margin: 0vh 2.5vh;
+    word-break: keep-all;
+    font: 500 2vh "Noto Sans KR", sans-serif;
+    line-height: 3.5vh;
+    text-indent: 3vh;
+}
+div.marginPC{
+    height: 0.5vh;
+}
+div.content{
+    height: 93.5vh;
+}
+div.content, div.grid{
+    column-width: 450px;
+    column-gap: 0.25vh;
+    column-rule: 0.25vh solid rgb(10, 10, 10);
+    overflow-x: scroll;
+    -ms-overflow-style: none;
+}
+div.content::-webkit-scrollbar, div.grid::-webkit-scrollbar {
+    display: none;
+}
+p.bracket{
+    text-indent: 0.75vh;
+}
+p.asterisk{
+    text-align: center;
+    text-indent: 0;
+}
+span.bracket{
+    letter-spacing: -1vh;
+}
+::selection{
+    color: lightpink;
+}
+ */
