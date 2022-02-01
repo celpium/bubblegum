@@ -30,8 +30,8 @@
         margin: 0;
     }
     body, h1, p, ul, li{
-        font: 500 18px "Noto Sans KR", sans-serif;
-        line-height: 24px;
+        font: 500 24px "Noto Sans KR", sans-serif;
+        line-height: 40px;
     }
     nav, div.title, ul.author, ul.next-prev, p{
         display: flex;
