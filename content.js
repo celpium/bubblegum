@@ -52,10 +52,11 @@ $(document).ready(function(){
 });
 function indexToggle(self){
     if(self.value === 'bubble'){
-        if(window.innerHeight <= 980){
+        if((window.orientation == -90 || window.orientation == 90) && window.innerWidth <= 980){
             $('nav').css('over-flow', 'scroll');
             $('nav').css('position', 'static');
             $('div.content').css('position', 'fixed');
+            // $('html, h1, p, li').css('font', '500 12px "Noto Sans KR", sans-serif;');
         }
         $('ul').css('display', 'block');
         $('ul.author, ul.next-prev').css('display', 'flex');
@@ -92,3 +93,11 @@ function indexToggle(self){
         self.value = 'bubble';
     }
 }
+window.addEventListener('orientationchange', function(){
+    if(((window.orientation == -90 || window.orientation == 90) && window.innerWidth <= 980) && $('input.indexToggle').css){
+        $('nav').css('over-flow', 'scroll');
+        $('nav').css('position', 'static');
+        $('div.content').css('position', 'fixed');
+        // $('html, h1, p, li').css('font', '500 12px "Noto Sans KR", sans-serif;');
+    }
+});
