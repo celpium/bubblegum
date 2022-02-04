@@ -94,7 +94,7 @@ function indexToggle(self){
     }
 }
 window.addEventListener('orientationchange', function(){
-    if(((window.orientation == -90 || window.orientation == 90) && window.innerWidth <= 980) && $('input.indexToggle').val() === 'pop'){
+    if((window.orientation == -90 || window.orientation == 90) && $('input.indexToggle').val() === 'pop'){
         $('nav').css('over-flow', 'scroll');
         $('nav').css('position', 'static');
         $('div.content').css('position', 'fixed');
