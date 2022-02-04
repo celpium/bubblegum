@@ -56,7 +56,7 @@ function indexToggle(self){
             $('nav').css('over-flow', 'scroll');
             $('nav').css('position', 'static');
             $('div.content').css('position', 'fixed');
-            // $('html, h1, p, li').css('font', '500 12px "Noto Sans KR", sans-serif;');
+            $('html, h1, p, li').css('font', '500 12px "Noto Sans KR", sans-serif;');
         }
         $('ul').css('display', 'block');
         $('ul.author, ul.next-prev').css('display', 'flex');
@@ -98,10 +98,10 @@ window.addEventListener('orientationchange', function(){
         $('nav').css('over-flow', 'scroll');
         $('nav').css('position', 'static');
         $('div.content').css('position', 'fixed');
-        // $('html, h1, p, li').css('font', '500 12px "Noto Sans KR", sans-serif;');
+        $('html, h1, p, li').css('font', '500 12px "Noto Sans KR", sans-serif;');
     }else if((window.orientation == 0 || window.orientation == 180 || window.orientation == -180) && $('input.indexToggle').val() === 'pop'){
         $('nav').css('position', 'fixed');
         $('div.content').css('position', 'static');
-        // $('html, h1, p, li').css('font', '500 12px "Noto Sans KR", sans-serif;');
+        $('html, h1, p, li').css('font', '500 36px "Noto Sans KR", sans-serif;');
     }
 });
