@@ -53,10 +53,8 @@ $(document).ready(function(){
 function indexToggle(self){
     if(self.value === 'bubble'){
         if((window.orientation == -90 || window.orientation == 90) && window.innerWidth <= 980){
-            $('nav').css('over-flow', 'scroll');
             $('nav').css('position', 'static');
             $('div.content').css('position', 'fixed');
-            $('html, h1, p, li').css('font', '500 12px "Noto Sans KR", sans-serif;');
         }
         $('ul').css('display', 'block');
         $('ul.author, ul.next-prev').css('display', 'flex');
@@ -95,13 +93,10 @@ function indexToggle(self){
 }
 window.addEventListener('orientationchange', function(){
     if((window.orientation == -90 || window.orientation == 90) && $('input.indexToggle').val() === 'pop'){
-        $('nav').css('over-flow', 'scroll');
         $('nav').css('position', 'static');
         $('div.content').css('position', 'fixed');
-        $('html, h1, p, li').css('font', '500 12px "Noto Sans KR", sans-serif;');
     }else if((window.orientation == 0 || window.orientation == 180 || window.orientation == -180) && $('input.indexToggle').val() === 'pop'){
         $('nav').css('position', 'fixed');
         $('div.content').css('position', 'static');
-        $('html, h1, p, li').css('font', '500 36px "Noto Sans KR", sans-serif;');
     }
 });
