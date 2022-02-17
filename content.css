@@ -41,7 +41,7 @@ h1, li{
     -o-user-select: none;
     user-select: none;
 }
-/* @media(min-width: 981px){
+@media(min-width: 981px){
     html, h1, p, li{
     font: 500 20px "Noto Sans KR", sans-serif;
     line-height: 1.6rem;
@@ -52,13 +52,13 @@ h1, li{
     font: 500 36px "Noto Sans KR", sans-serif;
     line-height: 1.6rem;
     }
-} */
+}
 
-html, h1, p, li{
+/* html, h1, p, li{
     font-family: "Noto Sans KR", sans-serif;
     font-weight: 500;
     line-height: 1.6rem;
-}
+} */
 
 nav, div.title, ul.author, ul.next-prev{
     display: flex;
