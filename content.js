@@ -30,6 +30,13 @@
 //     }
 // }
 
+
+if(navigator.userAgent.match(/Mobile|iP(hone|od)|BlackBerry|IEMobile|Kindle|NetFront|Silk-Accelerated|(hpw|web)OS|Fennec|Minimo|Opera M(obi|ini)|Blazer|Dolfin|Dolphin|Skyfire|Zune/)){
+    $('html, h1, p, li').css('font-size', '36px');
+}else if(!navigator.userAgent.match(/Mobile|iP(hone|od)|BlackBerry|IEMobile|Kindle|NetFront|Silk-Accelerated|(hpw|web)OS|Fennec|Minimo|Opera M(obi|ini)|Blazer|Dolfin|Dolphin|Skyfire|Zune/)){
+    $('html, h1, p, li').css('font-size', '20px');
+}
+
 $(document).ready(function(){
     $('div.content').on('mousewheel', function(self){
 		var wheelDelta = self.originalEvent.wheelDelta;
