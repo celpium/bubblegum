@@ -30,16 +30,6 @@
 //     }
 // }
 
-
-// if(navigator.userAgent.match(/Mobile|iP(hone|od)|BlackBerry|IEMobile|Kindle|NetFront|Silk-Accelerated|(hpw|web)OS|Fennec|Minimo|Opera M(obi|ini)|Blazer|Dolfin|Dolphin|Skyfire|Zune/)){
-//     $('html, h1, p, li').css('font-size', '36px');
-// }else if(!navigator.userAgent.match(/Mobile|iP(hone|od)|BlackBerry|IEMobile|Kindle|NetFront|Silk-Accelerated|(hpw|web)OS|Fennec|Minimo|Opera M(obi|ini)|Blazer|Dolfin|Dolphin|Skyfire|Zune/)){
-//     $('html, h1, p, li').css('font-size', '20px');
-// }
-
-
-
-
 $(document).ready(function(){
     $('div.content').on('mousewheel', function(self){
 		var wheelDelta = self.originalEvent.wheelDelta;
@@ -63,15 +53,25 @@ $(document).ready(function(){
 function pixelToRemConverter(pixelUnit){
     return pixelUnit / parseFloat(getComputedStyle(document.documentElement).fontSize);
 }
+function indexScroll(){
+    if(pixelToRemConverter(window.innerHeight) <= 41.3 && $('input.indexToggle').val() === 'pop'){
+        $('nav').css('position', 'static');
+        $('div.content').css('position', 'fixed');
+    }else if(pixelToRemConverter(window.innerHeight) > 41.3 && $('input.indexToggle').val() === 'pop'){
+        $('nav').css('position', 'fixed');
+        $('div.content').css('position', 'static');
+    }
+}
+window.addEventListener('resize', function(){
+    indexScroll();
+});
+window.addEventListener('orientationchange', function(){
+    indexScroll();
+});
 function indexToggle(self){
     if(self.value === 'bubble'){
-            if(pixelToRemConverter(window.innerHeight) <= 41.3){
-                $('nav').css('position', 'static');
-                $('div.content').css('position', 'fixed');
-            }else if(pixelToRemConverter(window.innerHeight) > 41.3){
-                $('nav').css('position', 'fixed');
-                $('div.content').css('position', 'static');
-            }
+        self.value = 'pop';
+        indexScroll();
         $('ul').css('display', 'block');
         $('ul.author, ul.next-prev').css('display', 'flex');
         $('li').css('display', 'list-item');
@@ -86,8 +86,8 @@ function indexToggle(self){
         }, function(){
             $('input.indexToggle').css('filter', 'none');
         });
-        self.value = 'pop';
     }else if(self.value === 'pop'){
+        self.value = 'bubble';
         $('ul:not(.this), li:not(.this)').css('display', 'none');
         $('ul.author.this').css('border-top', 'none');
         $('nav').css('height', '2.2rem');
@@ -104,34 +104,5 @@ function indexToggle(self){
         }
         $('nav').css('position', 'fixed');
         $('div.content').css('position', 'static');
-        self.value = 'bubble';
     }
 }
-// window.addEventListener('orientationchange', function(){
-//     if(((window.orientation == 90 || window.orientation == -90) && window.innerWidth <= 980) && $('input.indexToggle').val() === 'pop'){
-//         $('nav').css('position', 'static');
-//         $('div.content').css('position', 'fixed');
-//     }else if((window.orientation == 0 || window.orientation == 180 || window.orientation == -180) && $('input.indexToggle').val() === 'pop'){
-//         $('nav').css('position', 'fixed');
-//         $('div.content').css('position', 'static');
-//     }
-// });
-
-window.addEventListener('resize', function(){
-    if(pixelToRemConverter(window.innerHeight) <= 41.3 && $('input.indexToggle').val() === 'pop'){
-        $('nav').css('position', 'static');
-        $('div.content').css('position', 'fixed');
-    }else if(pixelToRemConverter(window.innerHeight) > 41.3 && $('input.indexToggle').val() === 'pop'){
-        $('nav').css('position', 'fixed');
-        $('div.content').css('position', 'static');
-    }
-});
-window.addEventListener('orientationchange', function(){
-    if(pixelToRemConverter(window.innerHeight) <= 41.3 && $('input.indexToggle').val() === 'pop'){
-        $('nav').css('position', 'static');
-        $('div.content').css('position', 'fixed');
-    }else if(pixelToRemConverter(window.innerHeight) > 41.3 && $('input.indexToggle').val() === 'pop'){
-        $('nav').css('position', 'fixed');
-        $('div.content').css('position', 'static');
-    }
-});
