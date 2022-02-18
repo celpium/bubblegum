@@ -53,13 +53,6 @@ h1, li{
     line-height: 1.6rem;
     }
 }
-
-/* html, h1, p, li{
-    font-family: "Noto Sans KR", sans-serif;
-    font-weight: 500;
-    line-height: 1.6rem;
-} */
-
 nav, div.title, ul.author, ul.next-prev{
     display: flex;
 }
