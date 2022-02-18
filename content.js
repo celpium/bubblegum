@@ -37,9 +37,7 @@
 //     $('html, h1, p, li').css('font-size', '20px');
 // }
 
-const pixelToRemUnit = (pixelUnit) => {
-    return pixelUnit / parseFloat(getComputedStyle(document.documentElement).fontSize);
-}, height = window.innerHeight, width = window.innerWidth;
+
 
 
 $(document).ready(function(){
@@ -61,11 +59,12 @@ $(document).ready(function(){
         $('div.content').scrollTop($('div.marginPC').scrollTop());
         $('div.content').scrollLeft($('div.marginPC').scrollLeft());
     });
-    alert(pixelToRemUnit(height));
-    alert(pixelToRemUnit(width));
 });
 function indexToggle(self){
     if(self.value === 'bubble'){
+        const pixelToRemUnit = (pixelUnit) => {
+            return pixelUnit / parseFloat(getComputedStyle(document.documentElement).fontSize);
+        }, height = window.innerHeight;
             if(pixelToRemUnit(height) <= 41.3){
                 $('nav').css('position', 'static');
                 $('div.content').css('position', 'fixed');
@@ -119,6 +118,9 @@ function indexToggle(self){
 // });
 
 window.addEventListener('resize', function(){
+    const pixelToRemUnit = (pixelUnit) => {
+        return pixelUnit / parseFloat(getComputedStyle(document.documentElement).fontSize);
+    }, height = window.innerHeight;
     if(pixelToRemUnit(height) <= 41.3 && $('input.indexToggle').val() === 'pop'){
         $('nav').css('position', 'static');
         $('div.content').css('position', 'fixed');
@@ -128,6 +130,9 @@ window.addEventListener('resize', function(){
     }
 });
 window.addEventListener('orientationchange', function(){
+    const pixelToRemUnit = (pixelUnit) => {
+        return pixelUnit / parseFloat(getComputedStyle(document.documentElement).fontSize);
+    }, height = window.innerHeight;
     if(pixelToRemUnit(height) <= 41.3 && $('input.indexToggle').val() === 'pop'){
         $('nav').css('position', 'static');
         $('div.content').css('position', 'fixed');
