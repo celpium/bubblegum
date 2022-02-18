@@ -60,15 +60,15 @@ $(document).ready(function(){
         $('div.content').scrollLeft($('div.marginPC').scrollLeft());
     });
 });
+function pixelToRemConverter(pixelUnit){
+    return pixelUnit / parseFloat(getComputedStyle(document.documentElement).fontSize);
+}
 function indexToggle(self){
     if(self.value === 'bubble'){
-        const pixelToRemUnit = (pixelUnit) => {
-            return pixelUnit / parseFloat(getComputedStyle(document.documentElement).fontSize);
-        }, height = window.innerHeight;
-            if(pixelToRemUnit(height) <= 41.3){
+            if(pixelToRemConverter(window.innerHeight) <= 41.3){
                 $('nav').css('position', 'static');
                 $('div.content').css('position', 'fixed');
-            }else if(pixelToRemUnit(height) > 41.3){
+            }else if(pixelToRemConverter(window.innerHeight) > 41.3){
                 $('nav').css('position', 'fixed');
                 $('div.content').css('position', 'static');
             }
@@ -118,25 +118,19 @@ function indexToggle(self){
 // });
 
 window.addEventListener('resize', function(){
-    const pixelToRemUnit = (pixelUnit) => {
-        return pixelUnit / parseFloat(getComputedStyle(document.documentElement).fontSize);
-    }, height = window.innerHeight;
-    if(pixelToRemUnit(height) <= 41.3 && $('input.indexToggle').val() === 'pop'){
+    if(pixelToRemConverter(window.innerHeight) <= 41.3 && $('input.indexToggle').val() === 'pop'){
         $('nav').css('position', 'static');
         $('div.content').css('position', 'fixed');
-    }else if(pixelToRemUnit(height) > 41.3 && $('input.indexToggle').val() === 'pop'){
+    }else if(pixelToRemConverter(window.innerHeight) > 41.3 && $('input.indexToggle').val() === 'pop'){
         $('nav').css('position', 'fixed');
         $('div.content').css('position', 'static');
     }
 });
 window.addEventListener('orientationchange', function(){
-    const pixelToRemUnit = (pixelUnit) => {
-        return pixelUnit / parseFloat(getComputedStyle(document.documentElement).fontSize);
-    }, height = window.innerHeight;
-    if(pixelToRemUnit(height) <= 41.3 && $('input.indexToggle').val() === 'pop'){
+    if(pixelToRemConverter(window.innerHeight) <= 41.3 && $('input.indexToggle').val() === 'pop'){
         $('nav').css('position', 'static');
         $('div.content').css('position', 'fixed');
-    }else if(pixelToRemUnit(height) > 41.3 && $('input.indexToggle').val() === 'pop'){
+    }else if(pixelToRemConverter(window.innerHeight) > 41.3 && $('input.indexToggle').val() === 'pop'){
         $('nav').css('position', 'fixed');
         $('div.content').css('position', 'static');
     }
