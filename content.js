@@ -30,6 +30,14 @@
 //     }
 // }
 
+// const isMobile = () => {
+//     try{document.createEvent("TouchEvent");
+//         return true;
+//     }catch(e){
+//         return false;
+//     }
+// };
+
 $(document).ready(function(){
     $('div.content').on('mousewheel', function(self){
 		var wheelDelta = self.originalEvent.wheelDelta;
@@ -49,15 +57,23 @@ $(document).ready(function(){
         $('div.content').scrollTop($('div.marginPC').scrollTop());
         $('div.content').scrollLeft($('div.marginPC').scrollLeft());
     });
+    // if(isMobile === false){
+    //     $('input.indexToggle').hover(function(){
+    //         $('input.indexToggle').css('filter', 'none');
+    //     }, function(){
+    //         $('input.indexToggle').css('filter', 'grayscale(100%)');
+    //     });
+    // }
 });
-function pixelToRemConverter(pixelUnit){
+
+function PRConverter(pixelUnit){
     return pixelUnit / parseFloat(getComputedStyle(document.documentElement).fontSize);
 }
 function indexScroll(){
-    if(pixelToRemConverter(window.innerHeight) <= 41.3 && $('input.indexToggle').val() === 'pop'){
+    if(PRConverter(window.innerHeight) <= 41.3 && $('input.indexToggle').val() === 'pop'){
         $('nav').css('position', 'static');
         $('div.content').css('position', 'fixed');
-    }else if(pixelToRemConverter(window.innerHeight) > 41.3 && $('input.indexToggle').val() === 'pop'){
+    }else if(PRConverter(window.innerHeight) > 41.3 && $('input.indexToggle').val() === 'pop'){
         $('nav').css('position', 'fixed');
         $('div.content').css('position', 'static');
     }
@@ -77,7 +93,7 @@ function indexToggle(self){
         $('li').css('display', 'list-item');
         $('ul.author.this').css('border-top', '0.1rem solid black');
         $('nav').css('height', 'auto');
-        $('nav').css('background-color', 'lightpink');
+        $('nav').css('background-color', '#FFC4CD');
         var popUrl = './image/pop.png';
         $('input.indexToggle').css('background-image', 'url(' + popUrl + ')');
         $('input.indexToggle').css('background-size', '1.6rem');
@@ -95,13 +111,13 @@ function indexToggle(self){
         var bubbleUrl = './image/bubble.png';
         $('input.indexToggle').css('background-image', 'url(' + bubbleUrl + ')');
         $('input.indexToggle').css('background-size', '1.2rem');
-        if(window.innerWidth > 980){
+        if(window.innerWidth > 1200){
             $('input.indexToggle').hover(function(){
                 $('input.indexToggle').css('filter', 'none');
             }, function(){
                 $('input.indexToggle').css('filter', 'grayscale(100%)');
             });
-        }
+        } //hover 제대로 안 먹음
         $('nav').css('position', 'fixed');
         $('div.content').css('position', 'static');
     }

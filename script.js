@@ -1,34 +1,69 @@
+if(window.innerWidth > window.innerHeight){
+    var obejeMinSize = window.innerWidth * 6 / 10;
+}else if(window.innerWidth < window.innerHeight){
+    var obejeMinSize = window.innerHeight * 6 / 10;
+}
+function pop(){
+    $('div.wrap, div.credits').show();
+    $('body').css('background-color', '#FFC4CD');
+    $('nav').css('position', 'static');
+    $('nav').css('background-color', 'transparent');
+    $('nav').css('border-bottom', '0.1rem solid transparent');
+    var popUrl = './image/pop.png';
+    $('input.mainButton').css('background-image', 'url(' + popUrl + ')');
+    $('input.mainButton').css('background-size', '1.6rem');
+    $('input.mainButton').css('filter', 'none');
+}
+function RPConverter(remUnit){
+    return remUnit * parseFloat(getComputedStyle(document.documentElement).fontSize);
+}
 $(document).ready(function(){
-    // var windowSquare = window.outerWidth * window.outerHeight;
-    // var bubblePopNumber = parseInt(windowSquare / 30000);
-    // for (var i = 0; i < bubblePopNumber; i++){
-    //     $('<div class = "bubble_pop"><img class = "bubble" src = "bubble.png"><img class = "pop" src = "pop.png"></div>').appendTo('div.bubble_gum');
-    // }
-    // $(".bubble_pop").each(function(){
-    //     $(this).css({"left": Math.random() * window.outerWidth, "top": Math.random() * window.outerHeight});
-    // });
-    $('.pop').hide();
-    $('.bubble').hover(function(){
+    $('div.wrap, div.credits').hide();
+    $('img.bubble').mouseover(function(){
         $(this).css('filter', 'none');
-    }, function(){
+    });
+    $('img.bubble').mouseout(function(){
         $(this).css('filter', 'grayscale(100%)');
     });
-    $('.bubble').mousedown(function(){
-        $(this).animate({width: '600px', height: '600px'}, 800, 'linear');
+    $('img.bubble').on('touchstart', function(){
+        $(this).css('filter', 'none');
     });
-    $(".bubble").mouseup(function(){
+    $('img.bubble').on('touchend', function(){
+        $(this).css('filter', 'grayscale(100%)');
+    });
+    $('img.bubble').mousedown(function(){
+        $(this).animate({width: RPConverter(24), height: RPConverter(24)}, 800, 'linear');
+    });
+    $('img.bubble').on('touchstart', function(){
+        $(this).animate({width: RPConverter(24), height: RPConverter(24)}, 800, 'linear');
+    });
+    $("img.bubble").mouseup(function(){
         $(this).stop();
-        if($('.bubble').css('width') == '600px'){
+        if($(this).width() >= RPConverter(20)){
             $(this).hide();
-            $(this).animate({width: '1px', height: '1px'}, 800, 'linear');
-            $(this).siblings('.pop').show();
+            $(this).siblings('img.pop').show();
             setTimeout(function(){
-                $('.pop').hide();
+                $('img.pop').hide();
             }, 800);
+            pop();
+        };
+    });
+    $("img.bubble").on('touchend', function(){
+        $(this).stop();
+        if($(this).width() >= RPConverter(20)){
+            $(this).hide();
+            $(this).siblings('img.pop').show();
             setTimeout(function(){
-                $('.bubble').show();
-                $('.bubble').animate({width: '60px', height: '60px'}, 100);
-            }, 1600);
+                $('img.pop').hide();
+            }, 800);
+            pop();
         };
     });
 });
+function mainButton(self){
+    if(self.value === 'bubble'){
+        self.value = 'pop';
+        $('img.bubble').hide();
+        pop();
+    }
+}
