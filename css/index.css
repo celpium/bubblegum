@@ -149,6 +149,9 @@ p{
 p:not(.head){
     text-indent: 1.6rem;
 }
+p.rightAlign{
+    text-align: right;
+}
 span.tab {
     white-space: pre;
 }
