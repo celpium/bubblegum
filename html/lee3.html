@@ -1,0 +1,152 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>풍선껌</title>
+        <meta charset = "utf-8">
+        <link rel = "stylesheet" href = "../css/content.css">
+        <style>
+            span.bold{
+                font-weight: 700;
+            }
+            span.italic{
+                font-style: italic;
+            }
+            span.larger{
+                font-size: 1.2rem;
+            }
+            span.smaller{
+                font-size: 0.8rem;
+            }
+        </style>
+        <script src = "../js/jquery_3.6.0.js"></script>
+        <script src = "../js/content.js"></script>
+        <link rel = "apple-touch-icon" sizes = "57x57" href = "../icn/apple-icon-57x57.png">
+        <link rel = "apple-touch-icon" sizes = "60x60" href = "../icn/apple-icon-60x60.png">
+        <link rel = "apple-touch-icon" sizes = "72x72" href = "../icn/apple-icon-72x72.png">
+        <link rel = "apple-touch-icon" sizes = "76x76" href = "../icn/apple-icon-76x76.png">
+        <link rel = "apple-touch-icon" sizes = "114x114" href = "../icn/apple-icon-114x114.png">
+        <link rel = "apple-touch-icon" sizes = "120x120" href = "../icn/apple-icon-120x120.png">
+        <link rel = "apple-touch-icon" sizes = "144x144" href = "../icn/apple-icon-144x144.png">
+        <link rel = "apple-touch-icon" sizes = "152x152" href = "../icn/apple-icon-152x152.png">
+        <link rel = "apple-touch-icon" sizes = "180x180" href = "../icn/apple-icon-180x180.png">
+        <link rel = "icon" type = "image/png" sizes = "192x192"  href = "../icn/android-icon-192x192.png">
+        <link rel = "icon" type = "image/png" sizes = "32x32" href = "../icn/favicon-32x32.png">
+        <link rel = "icon" type = "image/png" sizes = "96x96" href = "../icn/favicon-96x96.png">
+        <link rel = "icon" type = "image/png" sizes = "16x16" href = "../icn/favicon-16x16.png">
+        <link rel = "manifest" href = "../icn/manifest.json">
+        <meta name = "msapplication-TileColor" content = "#ffffff">
+        <meta name = "msapplication-TileImage" content = "../icn/ms-icon-144x144.png">
+        <meta name = "theme-color" content = "#ffffff">
+        <!--Ⓒ 김현채 이동현 안혜민 하태훈 2022, Published in Seoul Korea-->
+        <!--* 이 사이트에 수록된 작품의 저작권은 각 작품의 지은이에게 있습니다.-->
+        <!--* 이 사이트에 수록된 작품은 저작권법에 의해 보호받는 저작물로서 무단 전재 및 복제, 재배포를 금지합니다.-->
+    </head>
+    <body>
+        <nav>
+            <input type = "button" value = "bubble" class = "indexToggle" onclick = "indexToggle(this);">
+            <h1 class = "title"><a href = "./index.html">풍선껌</a></h1>
+            <ul class = "index this">
+                <ul class = "author">
+                    <li class = "author">김현채</li>
+                    <ul class = "work">
+                        <li class = "work"><a href = "./kim1.html">다른 나라</a></li>
+                    </ul>
+                </ul>
+                <ul class = "author">
+                    <li class = "author">하태훈</li>
+                    <ul class = "work">
+                        <li class = "work"><a href = "./ha1.html">만들어지지 않은 시간</a></li>
+                        <li class = "work"><a href = "./ha2.html">2018년 11월 15일, 겨울</a></li>
+                        <li class = "work"><a href = "./ha3.html">코팅된 사진은 불에 타지 않았다</a></li>
+                        <li class = "work"><a href = "./ha4.html">여름밤</a></li>
+                        <li class = "work"><a href = "./ha5.html">고양이 심바</a></li>
+                    </ul>
+                </ul>
+                <ul class = "author this">
+                    <li class = "author this">이동현</li>
+                    <ul class = "work this">
+                        <li class = "work"><a href = "./lee1.html">공화국의 자손들</a></li>
+                        <li class = "work"><a href = "./lee2.html">군인의 국적</a></li>
+                        <li class = "work this"><a href = "./lee3.html">기차역</a></li>
+                        <li class = "work"><a href = "./lee4.html">신도시</a></li>
+                        <li class = "work"><a href = "./lee5.html">아차산의 빨치산들</a></li>
+                        <li class = "work"><a href = "./lee6.html">옥상의 노을과 성 니콜라우스</a></li>
+                        <li class = "work"><a href = "./lee7.html">접사接寫</a></li>
+                        <li class = "work"><a href = "./lee8.html">주황색 마을</a></li>
+                        <li class = "work"><a href = "./lee9.html">축생도</a></li>
+                        <li class = "work"><a href = "./lee10.html">회기동의 이민자들</a></li>
+                    </ul>
+                </ul>
+                <ul class = "author">
+                    <li class = "author">안혜민</li>
+                    <ul class = "work">
+                        <li class = "work"><a href = "./an1.html">풍선껌 프롤로그</a></li>
+                        <li class = "work"><a href = "./an2.html">풍선껌 ①</a></li>
+                        <li class = "work"><a href = "./an3.html">풍선껌 ②</a></li>
+                        <li class = "work"><a href = "./an4.html">풍선껌 ③</a></li>
+                        <li class = "work"><a href = "./an5.html">풍선껌 ④</a></li>
+                        <li class = "work"><a href = "./an6.html">풍선껌 에필로그</a></li>
+                        <li class = "work"><a href = "./an7.html">이 각박한 세상에 고양이가 필요해 ①</a></li>
+                        <li class = "work"><a href = "./an8.html">이 각박한 세상에 고양이가 필요해 ②</a></li>
+                    </ul>
+                </ul>
+                <ul class = "author">
+                    <li class = "author">김현채</li>
+                    <ul class = "work">
+                        <li class = "work"><a href = "./kim1.html">다른 나라</a></li>
+                    </ul>
+                </ul>
+            </ul>
+            <ul class = "next-prev this">
+                <li class = "next-prev this"><a href = "./lee2.html">〈</a></li>
+                <li class = "next-prev this"><a href = "./lee4.html">〉</a></li>
+            </ul>
+        </nav>
+        <div class = "marginPC"></div>
+        <div class = "content">
+            <div class = "marginMobile"></div>
+            <p><span class = "bold larger">기차역</span></p>
+            <p>　</p>
+            <p>천체를 보기 위해 남하한 시간</p>
+            <p>부러진 새와 압사한 새들을 목격하곤 한다</p>
+            <p>　</p>
+            <p>그럼 모든 곳은</p>
+            <p>눈부시게 아름다워야 하고</p>
+            <p>　</p>
+            <p>예컨대 모텔샴푸로 머리를 감으며 노동에 대해서 생각하는 일과</p>
+            <p>　</p>
+            <p>당신과 내가 마주보고 앉아</p>
+            <p>별이 빛난다는 밤을 말했던 사연과</p>
+            <p>　</p>
+            <p>노파들이 쥐어주는 전단지들을 상냥히 받아들거나</p>
+            <p>노파들의 행선지를 손수 찾아주는 일</p>
+            <p>　</p>
+            <p>옷을 여미고 다니는 입김이 새어 나오는 아침엔</p>
+            <p>　</p>
+            <p>방충망은 없어 벌레들이 붕붕거리며 날곤 했다</p>
+            <p>　</p>
+            <p>거기는 달도 보이고</p>
+            <p>운도 좋으면 별도 보이지만</p>
+            <p>　</p>
+            <p>너는 아스팔트가 싫어 도시를 떠났다는데</p>
+            <p>나는 모텔의 샴푸로 머리를 감으며</p>
+            <p>어제의 과음과 오늘의 숙취를 후회하며</p>
+            <p>붕붕거리곤 하는 모기들을 두 손으로 잡았다</p>
+            <p>　</p>
+            <p>어제 술에 취해 난동을 부리며</p>
+            <p>울었던 친구는 몸을 긁으며</p>
+            <p>“미안했어” 라고 말하고</p>
+            <p>　</p>
+            <p>나른한 보살 같은 슬픈 얼굴을 하며 태운 담배 냄새는</p>
+            <p>작은 방에서 빠지지 않고</p>
+            <p>　</p>
+            <p>친구가 헛구역질을 하며 한강을 걸어서 건넌 다음</p>
+            <p>기차를 타며 되돌아갔을 때는</p>
+            <p>　</p>
+            <p>당신에게 이런 식으로 써지는 편지를</p>
+            <p>부리나케 쓰곤 한다</p>            
+            <div class ="marginMobile"></div>
+        </div>
+        <div class = "marginPC"></div>
+    </body>
+</html>

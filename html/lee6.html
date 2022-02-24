@@ -1,0 +1,305 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>풍선껌</title>
+        <meta charset = "utf-8">
+        <link rel = "stylesheet" href = "../css/content.css">
+        <style>
+            span.bold{
+                font-weight: 700;
+            }
+            span.italic{
+                font-style: italic;
+            }
+            span.larger{
+                font-size: 1.2rem;
+            }
+            span.smaller{
+                font-size: 0.8rem;
+            }
+        </style>
+        <script src = "../js/jquery_3.6.0.js"></script>
+        <script src = "../js/content.js"></script>
+        <link rel = "apple-touch-icon" sizes = "57x57" href = "../icn/apple-icon-57x57.png">
+        <link rel = "apple-touch-icon" sizes = "60x60" href = "../icn/apple-icon-60x60.png">
+        <link rel = "apple-touch-icon" sizes = "72x72" href = "../icn/apple-icon-72x72.png">
+        <link rel = "apple-touch-icon" sizes = "76x76" href = "../icn/apple-icon-76x76.png">
+        <link rel = "apple-touch-icon" sizes = "114x114" href = "../icn/apple-icon-114x114.png">
+        <link rel = "apple-touch-icon" sizes = "120x120" href = "../icn/apple-icon-120x120.png">
+        <link rel = "apple-touch-icon" sizes = "144x144" href = "../icn/apple-icon-144x144.png">
+        <link rel = "apple-touch-icon" sizes = "152x152" href = "../icn/apple-icon-152x152.png">
+        <link rel = "apple-touch-icon" sizes = "180x180" href = "../icn/apple-icon-180x180.png">
+        <link rel = "icon" type = "image/png" sizes = "192x192"  href = "../icn/android-icon-192x192.png">
+        <link rel = "icon" type = "image/png" sizes = "32x32" href = "../icn/favicon-32x32.png">
+        <link rel = "icon" type = "image/png" sizes = "96x96" href = "../icn/favicon-96x96.png">
+        <link rel = "icon" type = "image/png" sizes = "16x16" href = "../icn/favicon-16x16.png">
+        <link rel = "manifest" href = "../icn/manifest.json">
+        <meta name = "msapplication-TileColor" content = "#ffffff">
+        <meta name = "msapplication-TileImage" content = "../icn/ms-icon-144x144.png">
+        <meta name = "theme-color" content = "#ffffff">
+        <!--Ⓒ 김현채 이동현 안혜민 하태훈 2022, Published in Seoul Korea-->
+        <!--* 이 사이트에 수록된 작품의 저작권은 각 작품의 지은이에게 있습니다.-->
+        <!--* 이 사이트에 수록된 작품은 저작권법에 의해 보호받는 저작물로서 무단 전재 및 복제, 재배포를 금지합니다.-->
+    </head>
+    <body>
+        <nav>
+            <input type = "button" value = "bubble" class = "indexToggle" onclick = "indexToggle(this);">
+            <h1 class = "title"><a href = "./index.html">풍선껌</a></h1>
+            <ul class = "index this">
+                <ul class = "author">
+                    <li class = "author">김현채</li>
+                    <ul class = "work">
+                        <li class = "work"><a href = "./kim1.html">다른 나라</a></li>
+                    </ul>
+                </ul>
+                <ul class = "author">
+                    <li class = "author">하태훈</li>
+                    <ul class = "work">
+                        <li class = "work"><a href = "./ha1.html">만들어지지 않은 시간</a></li>
+                        <li class = "work"><a href = "./ha2.html">2018년 11월 15일, 겨울</a></li>
+                        <li class = "work"><a href = "./ha3.html">코팅된 사진은 불에 타지 않았다</a></li>
+                        <li class = "work"><a href = "./ha4.html">여름밤</a></li>
+                        <li class = "work"><a href = "./ha5.html">고양이 심바</a></li>
+                    </ul>
+                </ul>
+                <ul class = "author this">
+                    <li class = "author this">이동현</li>
+                    <ul class = "work this">
+                        <li class = "work"><a href = "./lee1.html">공화국의 자손들</a></li>
+                        <li class = "work"><a href = "./lee2.html">군인의 국적</a></li>
+                        <li class = "work"><a href = "./lee3.html">기차역</a></li>
+                        <li class = "work"><a href = "./lee4.html">신도시</a></li>
+                        <li class = "work"><a href = "./lee5.html">아차산의 빨치산들</a></li>
+                        <li class = "work this"><a href = "./lee6.html">옥상의 노을과 성 니콜라우스</a></li>
+                        <li class = "work"><a href = "./lee7.html">접사接寫</a></li>
+                        <li class = "work"><a href = "./lee8.html">주황색 마을</a></li>
+                        <li class = "work"><a href = "./lee9.html">축생도</a></li>
+                        <li class = "work"><a href = "./lee10.html">회기동의 이민자들</a></li>
+                    </ul>
+                </ul>
+                <ul class = "author">
+                    <li class = "author">안혜민</li>
+                    <ul class = "work">
+                        <li class = "work"><a href = "./an1.html">풍선껌 프롤로그</a></li>
+                        <li class = "work"><a href = "./an2.html">풍선껌 ①</a></li>
+                        <li class = "work"><a href = "./an3.html">풍선껌 ②</a></li>
+                        <li class = "work"><a href = "./an4.html">풍선껌 ③</a></li>
+                        <li class = "work"><a href = "./an5.html">풍선껌 ④</a></li>
+                        <li class = "work"><a href = "./an6.html">풍선껌 에필로그</a></li>
+                        <li class = "work"><a href = "./an7.html">이 각박한 세상에 고양이가 필요해 ①</a></li>
+                        <li class = "work"><a href = "./an8.html">이 각박한 세상에 고양이가 필요해 ②</a></li>
+                    </ul>
+                </ul>
+                <ul class = "author">
+                    <li class = "author">김현채</li>
+                    <ul class = "work">
+                        <li class = "work"><a href = "./kim1.html">다른 나라</a></li>
+                    </ul>
+                </ul>
+            </ul>
+            <ul class = "next-prev this">
+                <li class = "next-prev this"><a href = "./lee5.html">〈</a></li>
+                <li class = "next-prev this"><a href = "./lee7.html">〉</a></li>
+            </ul>
+        </nav>
+        <div class = "marginPC"></div>
+        <div class = "content">
+            <div class = "marginMobile"></div>
+            <p><span class = "bold larger">옥상의 노을과 성 니콜라우스</span></p>
+            <p>　</p>
+            <p>무슨 말인지 모를 말을 했을 터</p>
+            <p>너는 그때까지는 내 옆에 있을 것이다</p>
+            <p>　</p>
+            <p>곤두선 내 털을 보면</p>
+            <p>나도 비슷하다면서,</p>
+            <p>그래도 완전히 같은 건 아니라면서 비릿하게 웃어주었으니깐</p>
+            <p>　</p>
+            <p>몇 년이 흘렀지만 이곳은 여전히 천장이 있는 옥상이었고</p>
+            <p>　</p>
+            <p>마지막으로 복된 자가 되는 자는 다음 사항을 목격하곤 했으니까</p>
+            <p>　</p>
+            <p>빨간 색, 빨간 상징, 띠, 원과</p>
+            <p>일종의 달콤한</p>
+            <p>동그라미</p>
+            <p>안녕</p>
+            <p>이라</p>
+            <p>말을 하곤 하는 우리를 일컬어</p>
+            <p>　</p>
+            <p>혹자는 호모사피엔스라고 하거나</p>
+            <p>호모사피엔스사피엔스라고도 한다</p>
+            <p>　</p>
+            <p>사실 일가친척들이 내 따귀를 후려갈기기 전에는 나는 말을 할 줄도 몰랐을 걸?</p>
+            <p>　</p>
+            <p>걸을 줄만 알았지</p>
+            <p>　</p>
+            <p>아기의 두뇌엔 무시무시한 스파이들이</p>
+            <p>들이 닥치기 시작한 무서운 시절</p>
+            <p>모든 간악한 첩자들이 휘파람을 불기 시작했다 한다면</p>
+            <p>　</p>
+            <p>우리가 존재하기에는 너무 아까웠단 소리도 된다 하겠다</p>
+            <p>우리는 산뜻한 의미로는</p>
+            <p>홀로 산 적이 없었거니와</p>
+            <p>　</p>
+            <p>옥상의 이미지는 썩어가는 담배꽁초와 갈색 웅덩이에 지나지 않았고</p>
+            <p>이미지에 대한 어림없는 환상과 거짓 향수(鄕愁)로</p>
+            <p>사람들이 옥상을 찾게 된 거다</p>
+            <p>　</p>
+            <p>온통 휩싸일 수도 있었다</p>
+            <p>어느 날 할아버지의 조국은 망해 있었고</p>
+            <p>새로운 조국의 언어 덕분에 할아버지는</p>
+            <p>평생 조선어를 하면 혀가 무뎌진 것이었으니</p>
+            <p>　</p>
+            <p>모든 유망하지 않음</p>
+            <p>모든 무가치한 것들</p>
+            <p>오래된 먼지들이 드디어 자근자근 창문을 쓰다듬기 시작했고</p>
+            <p>　</p>
+            <p>어기영차! 만들어진 하나의 사탄,</p>
+            <p>일종의 알사탕,</p>
+            <p>일종의 자랑스러움,</p>
+            <p>어느 정도의 연대</p>
+            <p>　</p>
+            <p>태양은 마침내 등분된 채</p>
+            <p>　</p>
+            <p>눈을 관통해</p>
+            <p>커피잔 속 얼음조각들은 마침내 모두 녹아버렸다</p>
+            <p>　</p>
+            <p><span class = "bold">저녁이 덜 되었을 때 사설 양로원에 봉사를 하러 간다. 양로원은 평화로워 보인다. 노인 하나의 눈에는 구멍이 뚫려 있거나 닫혀 있다. 그와 난 눈동자와 눈을 마주치지 못했다. 뿌옇거나 아무것도 없거나</span></p>
+            <p>　</p>
+            <p><span class = "bold">우리는 살았는가도 말하지 못한다는 건실한 사랑과 어둠과 건실한 사랑</span></p>
+            <p>　</p>
+            <p><span class = "bold">친구는 그날 애인과 헤어졌고</span></p>
+            <p>　</p>
+            <p><span class = "bold">우리는 그날도 오후 11시까지 앉아있지 않았는가?</span></p>
+            <p>　</p>
+            <p><span class = "bold">그러니</span></p>
+            <p>　</p>
+            <p>그러니</p>
+            <p>　</p>
+            <p><span class = "bold">“내 묫자리에 봉분이 생기는 것을 원하지 않소. 내 사체 혹은 그 일부 혹은 그 잔해가 자유롭게 떠돌거나 그랬으면 좋을 텐데. 이미 좁은 세상, 이미 넓은 사람의 영역, 그곳에 우리 죽은 이들이 서 있거나 누울 공간을 세상은 허락하였어도, 나는 허락하지 않을 것이고, 우리의 미래와 개인적인 오래된 이상 또한 그리 말하고 있소.”</span></p>
+            <p>　</p>
+            <p>이미 그렇게 될 텐데</p>
+            <p>　</p>
+            <p>내가 밝은 날을 제시하면</p>
+            <p>―감당할 수 있어요?</p>
+            <p>　</p>
+            <p>상전을 어떻게 두 분을 모시냐는 어리석은 생각과</p>
+            <p>말을 한다는 믿음으로 무장한 시인들</p>
+            <p>마침내 모든 시인들은 물구나무를 서고</p>
+            <p>　</p>
+            <p><span class = "bold">징글벨. 징글벨,</span></p>
+            <p>　</p>
+            <p>모든 악몽이 예지몽이 되고 예언자가 되어</p>
+            <p>태양을 마주하는 큰 사람이 된다</p>
+            <p>　</p>
+            <p>그렇기에 너는 있고 나도 있다</p>
+            <p>　</p>
+            <p>주께서 이미 세상을 승리하였어도</p>
+            <p>우리가 번제를 한다는 것은</p>
+            <p>모든 귀신들이 세상을 알음알음 알기 시작했다는 것도 된다는 것</p>
+            <p>　</p>
+            <p>마귀들이 번뜩이면 빛이 나기 시작하고 말았다</p>
+            <p>　</p>
+            <p>마귀와 나는 신기루와 헛것과 옥상에 대해서 말했다 마귀와 내가 그 오랜 시간 동안 의견을 나누면서도 오직 서로 동의한 것이 있다면 그것은 오늘 날이 춥고, 당신이 아프면 안 될 것 같다고 말한 것,</p>
+            <p>　</p>
+            <p>우리 아프진 말자</p>
+            <p>　</p>
+            <p>할아버지는 코를 골며</p>
+            <p>예전의 조국을</p>
+            <p>　</p>
+            <p>차디차게 저주하기 시작했다</p>
+            <p>　</p>
+            <p>오래된 금강산, 나는…</p>
+            <p>　</p>
+            <p><span class = "bold">적은 것들</span></p>
+            <p>　</p>
+            <p><span class = "bold">받아 적은 것들</span></p>
+            <p>　</p>
+            <p>율법이 공고된 이후</p>
+            <p>처음으로 장어를 구워 먹기 시작한 사람들</p>
+            <p>　</p>
+            <p>해가 지는 어느 멋진 맑은 날</p>
+            <p>　</p>
+            <p>우리는 스스로 사람이 되고</p>
+            <p>우리는 스스로 걷고 걷거나</p>
+            <p>　</p>
+            <p>뛰다 발바닥이 아프거나</p>
+            <p>마귀들 또한 광택이 나고</p>
+            <p>　</p>
+            <p>할아버지는 평생 동안</p>
+            <p>할아버지는 평생 동안</p>
+            <p>　</p>
+            <p>망해버린 조국이 의아했으며</p>
+            <p>　</p>
+            <p>망해버린 조국이 왜 자신을 그리도 능멸하였으며</p>
+            <p>　</p>
+            <p>새로운 조국 또한 의아한 것들 투성이었으며</p>
+            <p>　</p>
+            <p>새로운 조국이 왜 자신을 그리도 능멸하였으며</p>
+            <p>　</p>
+            <p>어느 새</p>
+            <p>　</p>
+            <p>빙글거리면서 웃으며</p>
+            <p>왜 한 치의 묵상도 우리는 하지 못했느냐고 물었을 때</p>
+            <p>우리가 공평하게 못나다는 생각을 할 때</p>
+            <p>　</p>
+            <p>해가 두 개 뜬다는 예지몽을 꾸곤 했다</p>
+            <p>　</p>
+            <p>커피를 태운다는 공장에서 일했다는 늙은 벗은</p>
+            <p>내가 마시는 커피의 가격을 듣고는</p>
+            <p>　</p>
+            <p>나를 의아해하며 저주하기 시작했고</p>
+            <p>　</p>
+            <p>할아버지는</p>
+            <p>　</p>
+            <p>여행을 가자고 했으면서</p>
+            <p>어디론가 가버린 것이다</p>
+            <p>　</p>
+            <p>할아버지는 돌아가시거나 죽었거나</p>
+            <p>할아버지는 죽었거나 돌아가시거나</p>
+            <p>　</p>
+            <p>어느 날 들은 모든 질문에 대해서</p>
+            <p>참으로 망측하다는 생각을 한다</p>
+            <p>역으로 질문하지도 않고도</p>
+            <p>　</p>
+            <p>나는 망측했기에</p>
+            <p>할아버지는 여행을 가고 말았다</p>
+            <p>　</p>
+            <p>저 모든 말들이</p>
+            <p>배우지 않아도 그저 주어져 있으면 참 좋겠다는 생각을 한다</p>
+            <p>　</p>
+            <p>밤이 된다면</p>
+            <p>니콜라우스가 그 오랜 잠에서 깨어나고</p>
+            <p>오랜 파업이 끝나버리고 말았다</p>
+            <p>　</p>
+            <p>기복에 관한</p>
+            <p>소극적인 자기부정과</p>
+            <p>조그마한 기복</p>
+            <p>　</p>
+            <p>비릿한 웃음과</p>
+            <p>　</p>
+            <p>일종의 너.</p>
+            <p>　</p>
+            <p>“저 방향으로 쭉 가면 공항이 보이거든요.”</p>
+            <p>　</p>
+            <p>“그러면 그렇게 여행을 가는 건가요?”</p>
+            <p>　</p>
+            <p>“가 보면 알겠죠.”</p>
+            <p>　</p>
+            <p><span class = "italic">채색하지 않은 모든 밑그림과</span></p>
+            <p>　</p>
+            <p><span class = "italic">채색되지 못한 모든 산타클로스</span></p>
+            <p>　</p>
+            <p><span class = "italic">모든 피부와</span></p>
+            <p>　</p>
+            <p><span class = "italic">모든 털</span></p>
+            <p>　</p>
+            <p><span class = "italic">일종의 단백질들.</span></p>
+            <p>　</p>
+            <p><span class = "italic">모든 니콜라우스와 젊은 조부의 이름으로!</span></p>
+            <p>　</p>
+            <p><span class = "italic">전진!</span></p>
+            <div class ="marginMobile"></div>
+        </div>
+        <div class = "marginPC"></div>
+    </body>
+</html>

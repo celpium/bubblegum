@@ -1,0 +1,226 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>풍선껌</title>
+        <meta charset = "utf-8">
+        <link rel = "stylesheet" href = "../css/content.css">
+        <style>
+            span.bold{
+                font-weight: 700;
+            }
+            p.asterisk{
+                flex-direction: column;
+                text-align: center;
+                text-indent: 0rem;
+            }
+            p.bracket{
+                text-indent: 1.2rem;
+            }
+            span.bracket{
+                letter-spacing: -0.4rem;
+            }
+            p.rightAlign{
+                text-align: right
+            }
+        </style>
+        <script src = "../js/jquery_3.6.0.js"></script>
+        <script src = "../js/content.js"></script>
+        <link rel = "apple-touch-icon" sizes = "57x57" href = "../icn/apple-icon-57x57.png">
+        <link rel = "apple-touch-icon" sizes = "60x60" href = "../icn/apple-icon-60x60.png">
+        <link rel = "apple-touch-icon" sizes = "72x72" href = "../icn/apple-icon-72x72.png">
+        <link rel = "apple-touch-icon" sizes = "76x76" href = "../icn/apple-icon-76x76.png">
+        <link rel = "apple-touch-icon" sizes = "114x114" href = "../icn/apple-icon-114x114.png">
+        <link rel = "apple-touch-icon" sizes = "120x120" href = "../icn/apple-icon-120x120.png">
+        <link rel = "apple-touch-icon" sizes = "144x144" href = "../icn/apple-icon-144x144.png">
+        <link rel = "apple-touch-icon" sizes = "152x152" href = "../icn/apple-icon-152x152.png">
+        <link rel = "apple-touch-icon" sizes = "180x180" href = "../icn/apple-icon-180x180.png">
+        <link rel = "icon" type = "image/png" sizes = "192x192"  href = "../icn/android-icon-192x192.png">
+        <link rel = "icon" type = "image/png" sizes = "32x32" href = "../icn/favicon-32x32.png">
+        <link rel = "icon" type = "image/png" sizes = "96x96" href = "../icn/favicon-96x96.png">
+        <link rel = "icon" type = "image/png" sizes = "16x16" href = "../icn/favicon-16x16.png">
+        <link rel = "manifest" href = "../icn/manifest.json">
+        <meta name = "msapplication-TileColor" content = "#ffffff">
+        <meta name = "msapplication-TileImage" content = "../icn/ms-icon-144x144.png">
+        <meta name = "theme-color" content = "#ffffff">
+        <!--Ⓒ 김현채 이동현 안혜민 하태훈 2022, Published in Seoul Korea-->
+        <!--* 이 사이트에 수록된 작품의 저작권은 각 작품의 지은이에게 있습니다.-->
+        <!--* 이 사이트에 수록된 작품은 저작권법에 의해 보호받는 저작물로서 무단 전재 및 복제, 재배포를 금지합니다.-->
+    </head>
+    <body>
+        <nav>
+            <input type = "button" value = "bubble" class = "indexToggle" onclick = "indexToggle(this);">
+            <h1 class = "title"><a href = "./index.html">풍선껌</a></h1>
+            <ul class = "index this">
+                <ul class = "author">
+                    <li class = "author">김현채</li>
+                    <ul class = "work">
+                        <li class = "work"><a href = "./kim1.html">다른 나라</a></li>
+                    </ul>
+                </ul>
+                <ul class = "author">
+                    <li class = "author">하태훈</li>
+                    <ul class = "work">
+                        <li class = "work"><a href = "./ha1.html">만들어지지 않은 시간</a></li>
+                        <li class = "work"><a href = "./ha2.html">2018년 11월 15일, 겨울</a></li>
+                        <li class = "work"><a href = "./ha3.html">코팅된 사진은 불에 타지 않았다</a></li>
+                        <li class = "work"><a href = "./ha4.html">여름밤</a></li>
+                        <li class = "work"><a href = "./ha5.html">고양이 심바</a></li>
+                    </ul>
+                </ul>
+                <ul class = "author">
+                    <li class = "author">이동현</li>
+                    <ul class = "work">
+                        <li class = "work"><a href = "./lee1.html">공화국의 자손들</a></li>
+                        <li class = "work"><a href = "./lee2.html">군인의 국적</a></li>
+                        <li class = "work"><a href = "./lee3.html">기차역</a></li>
+                        <li class = "work"><a href = "./lee4.html">신도시</a></li>
+                        <li class = "work"><a href = "./lee5.html">아차산의 빨치산들</a></li>
+                        <li class = "work"><a href = "./lee6.html">옥상의 노을과 성 니콜라우스</a></li>
+                        <li class = "work"><a href = "./lee7.html">접사接寫</a></li>
+                        <li class = "work"><a href = "./lee8.html">주황색 마을</a></li>
+                        <li class = "work"><a href = "./lee9.html">축생도</a></li>
+                        <li class = "work"><a href = "./lee10.html">회기동의 이민자들</a></li>
+                    </ul>
+                </ul>
+                <ul class = "author this">
+                    <li class = "author this">안혜민</li>
+                    <ul class = "work this">
+                        <li class = "work"><a href = "./an1.html">풍선껌 프롤로그</a></li>
+                        <li class = "work"><a href = "./an2.html">풍선껌 ①</a></li>
+                        <li class = "work this"><a href = "./an3.html">풍선껌 ②</a></li>
+                        <li class = "work"><a href = "./an4.html">풍선껌 ③</a></li>
+                        <li class = "work"><a href = "./an5.html">풍선껌 ④</a></li>
+                        <li class = "work"><a href = "./an6.html">풍선껌 에필로그</a></li>
+                        <li class = "work"><a href = "./an7.html">이 각박한 세상에 고양이가 필요해 ①</a></li>
+                        <li class = "work"><a href = "./an8.html">이 각박한 세상에 고양이가 필요해 ②</a></li>
+                    </ul>
+                </ul>
+                <ul class = "author">
+                    <li class = "author">김현채</li>
+                    <ul class = "work">
+                        <li class = "work"><a href = "./kim1.html">다른 나라</a></li>
+                    </ul>
+                </ul>
+            </ul>
+            <ul class = "next-prev this">
+                <li class = "next-prev this"><a href = "./an2.html">〈</a></li>
+                <li class = "next-prev this"><a href = "./an4.html">〉</a></li>
+            </ul>
+        </nav>
+        <div class = "marginPC"></div>
+        <div class = "content">
+            <div class = "marginMobile"></div>
+            <p class = "asterisk">*</p>
+            <p>　</p>
+            <p>처음 김김밥을 본 것은 동양 철학을 가르치는 교양 수업 시간이었다. 제일 먼저 출석이 불리는데 순간 두 귀를 의심했다. 두 눈을 의심한 건 교수님도 마찬가지였다. 김김밥이 네, 하고 대답하는 순간 온 강의실의 이목이 단 한 사람에게 집중되었다.</p>
+            <p>그 순간 강의실을 휘어잡은 단 세 글자. 반시우는 그 세 글자가 할 수 있는 일을 똑똑히 보았다. 얼마나 대단한 권력인가, 반시우는 강의 시간 내내 김김밥의 뒤통수를 뚫어져라 쳐다보았다.</p>
+            <p>이름이 권력이라는 것쯤은 초등학생 때부터 알고 있었다. 출석번호가 빠를수록 선생님은 이름을 먼저 외웠고, 이름이 독특하면 오래 기억했다. 칠판 앞으로 나와 문제를 풀게 시키거나 콕 집어 말을 걸 때면 늘 그런 아이들이 선택받았다. 반시우는 그런 사람이 되고 싶었다. 그저 타고난 것으로 선택받는 소수가.</p>
+            <p>“이름이 참 예쁘시네요.”</p>
+            <p>불쑥 다가가서 말을 걸기에는 적절치 못했던 멘트였는지도 모른다.</p>
+            <p>“저 남자친구 있는데요.”</p>
+            <p>김김밥의 대답을 듣고 나서야 그런 멘트를 하기에 적절치 못한 이름이었다는 것을 깨달았다.</p>
+            <p>　</p>
+            <p>그 남자친구는 얼마 지나지 않아 미대 건물 근처에서 목격할 수 있었다. 어디서 본 적이 있는 여자애도 함께였다. 분명 같은 수업을 들었었는데…. 한규선. 맞다, 한규선이라는 애였다. 남자친구한테 거하게 차였다면서 조별 발표 날에 잠수를 타는 바람에 유명했었다.</p>
+            <p>“내 친구가 분명히 봤다고 했어.”</p>
+            <p>한규선이 소리치고 있었다. 언성이 꽤 높아져 사람들이 힐끗거리기 시작했다.</p>
+            <p>“여자친구 전화라면서 받았다며. 내 이름으로 저장되어 있었고.”</p>
+            <p>“나도 그건 잘….”</p>
+            <p>남자는 머리를 벅벅 긁었다.</p>
+            <p>“잘못 저장되어 있었나 보지.”</p>
+            <p>한규선의 손에는 분홍색 편지지가 들려 있었다. 감사의 달 이벤트 때 받은 거였다. 5월 한 달 동안 학생회 우체통에 넣어두면 학번과 이름으로 편지를 대신 보내 주는 이벤트였다.</p>
+            <p>“이 편지도 네가 쓴 거 맞잖아!”</p>
+            <p>“내가 쓴 게 맞긴 한데….”</p>
+            <p>남자가 김김밥의 눈치를 살피며 말했다.</p>
+            <p>“네가 착각한 거 아니야? 난 분명히 여자친구 이름으로 보냈는데-”</p>
+            <p>“무슨 소리야? 여기 규선이에게, 규선아, 한규선! 똑똑히 적혀 있잖아!”</p>
+            <p>한규선이 편지지를 남자의 눈앞에 펄럭거리는 내내 김김밥은 아무 말도 하지 않고 땅만 바라보고 있었다.</p>
+            <p>“니들 때문에 내가 무슨 소리를 듣고 있는지 알아? 멀쩡한 사람을 불륜녀로 만들어 놓고 모르는 척이야?”</p>
+            <p>김김밥은 화가 난 게 아닌 것 같았다. 다들 남자가 바람이 났네, 여자가 쇼를 하고 있네, 쑥덕대는데 혼자서 다 예상했다는 듯한 얼굴을 하고는 우두커니 남 일처럼 둘의 말싸움을 쳐다보고 있었다.</p>
+            <p>“그런 거 아니야.”</p>
+            <p>마침내 김김밥이 말했다.</p>
+            <p>“뭐?”</p>
+            <p>한규선이 김김밥을 죽일 듯이 노려보았다.</p>
+            <p>“나한테 쓴 편지야, 그거.”</p>
+            <p>“무슨 개소리야. 여기 써 있는 내 이름 안 보여?”</p>
+            <p>김김밥은 고개를 내저었다.</p>
+            <p>“내용을 읽어보면 알 거 아냐. 나한테 쓴 거야.”</p>
+            <p>한규선은 말이 끝나기도 전에 소리를 질러댔다.</p>
+            <p>“지금 그게 중요해? 사람들이 나한테 뭐라고 하는지 아냐고! 왜 내가 이런 일을 당해야 해? 내가 뭘 잘못했는데!”</p>
+            <p>지켜보는 내내 한규선은 펄펄 뛰기도 하고 소리도 지르며 억울함을 호소했다. 이 둘에게 뭔가를 요구한다기보다는, 요란을 피워 소문이 퍼지게 해서 과 사람들에게 자신의 결백을 주장하기 위한 일종의 퍼포먼스였다. 식당에서 밥을 먹다가 머리카락이 나와도 싫은 소리를 하지 못하는 반시우로서는, 이해하기 힘든 에너지 소비였다. 마치 눈에 보이지 않는 명예를 지키기 위해서 포효하는 사자와 같았달까. 동물의 왕국에서는 역시 목소리 큰 놈이 이기는 건가 싶었다.</p>
+            <p>하지만 김김밥은 여기서도 이 세렝게티의 주인공이었다. 한규선이 아무리 포효하며 자기 영역을 지키려고 해도 이 사자는 태어나길 우두머리로 태어났다. 반시우가 목격한 사실은 이것이었다.</p>
+            <p>　</p>
+            <p class = "asterisk">*</p>
+            <p>　</p>
+            <p>간밤에 꾼 꿈에 개가 나왔는지 기억은 나지 않았지만, 김김밥은 문자 내용을 확인하자마자 냅다 핸드폰을 침대에 집어 던졌다.</p>
+            <p class = "bracket">〈안녕하세요, 반시우 님. 귀사에 지원해주셔서 감사드립니다. 안타깝게도 이번에는 귀하를 채용할 수 없음을…<span class = "bracket">〉</span>.</p>
+            <p>벌써 몇 번째 받는 탈락 문자였는지 셀 수도 없었다. 저 문자를 받는 날마다 똑같은 기분 나쁜 꿈을 꾼다는 것만 기억이 났다. 늘 이름이 처음 바뀌기 전날 문방구에서 만났던 잘생긴 오빠가 나왔다. 무슨 대화를 나눴는지 안개가 낀 것처럼 흐릿했다. 복숭아 이야기를 했던 건 분명한 것 같은데 말이다. 아마 그 골목 어딘가에 개 한 마리가 앉아서 볼일을 보고 있는 게 틀림없었다.</p>
+            <p>핸드폰이 웅웅거렸다. 민자영에게서 걸려온 전화였다.</p>
+            <p>―야, 기사 봤냐? 대박이다, 대박.</p>
+            <p>“무슨 기사.”</p>
+            <p>김김밥은 침대에 그대로 드러누웠다.</p>
+            <p>“언니는 그럴 여유가 없단다. 나 오늘도 최종 떨어졌어.”</p>
+            <p>―지금 그런 게 중요한 게 아니라니까? 반시우 말이야, 반시우. 완전히 돈방석에 앉았다고. 네 이름으로.</p>
+            <p>“내 이름으로?”</p>
+            <p>―야, 이 새끼 이래도 되는 거냐? 처음 봤을 때부터 사기꾼 짓만 골라서 하더니만 이젠 지가 뭐라도 된냥 네 이름 가지고 장사를 하잖아!</p>
+            <p>“….”</p>
+            <p>―이름은 대체 언제 돌아와? 조금 있으면 벌써 일 년이야. 언제까지 저 여우같은 놈이 잘되는 꼴을 봐야 하냐고!</p>
+            <p>전화를 끊고 민자영이 보내 준 기사를 확인했다. 포털 사이트 실시간 검색어는 이미 익숙한 이름으로 도배되어 있었다.</p>
+            <p class = "bracket">〈인기 BJ 김김밥, 방송에서 수입 공개! 재벌급 자산?<span class = "bracket">〉</span>.</p>
+            <p class = "bracket">〈괴상한 이름으로 유명세 떨쳐 … BJ 김김밥, 실명 인증한 영상 조회수 200만 돌파<span class = "bracket">〉</span>.</p>
+            <p>그 유명하다는 영상을 하나 틀었다.</p>
+            <p>반시우의 상기된 얼굴 위로 별이 박힌 풍선들이 잔뜩 날아다녔다.</p>
+            <p>부러웠다고 했던 말을 믿었던 건 아니었는데. 역시 돈이 필요하다고 한쪽이 진심이었나보다.</p>
+            <p>저게 갖고 싶었던 거구나. 반시우가 불었던 풍선은 터지고 없지만, 사람들은 그걸 채워주기라도 하듯 풍선에 무언가를 채워넣고 후후 불어 보냈다. 그럼 저 사람들은 어떻게 되는 거지? 하나씩 불 때마다, 그 안에 갖고 싶은 것을 가득 채워서 불 때마다, 무엇이 그 빈자리를 채우는 걸까.</p>
+            <p>그게 꽤 허무하다는 건 이미 충분히 느끼고 있었다. 펑, 하기 직전까지 터져버릴 것 같이 속을 꽉꽉 채우고 있던 것들은 이미 어디론가 흩어져버리고 없었다. 아아, 풍선 같은 거에 넣어두는 게 아니었는데. 소중한 내 반짝이는 이름 스티커, 졸업장, 남자친구….</p>
+            <p>김김밥은 천천히 눈꺼풀이 무거워지는 것을 느꼈다.</p>
+            <p>　</p>
+            <p class = "asterisk">*</p>
+            <p>　</p>
+            <p>“거기 꼬마 아가씨, 풍선껌 하나 살래?”</p>
+            <p>늘어난 츄리닝에 슬리퍼를 질질 끌고 메로나를 문 사람에게 그런 말을 한 것부터 의심해야 했는지도 모른다.</p>
+            <p>“복숭아향이어서 맛있는데.”</p>
+            <p>아니, 동네 문방구 앞에서 저렇게 잘생긴 오빠가 풍선껌을 팔고 있다는 것부터 이상했다.</p>
+            <p>“저, 저요?”</p>
+            <p>나는 재빨리 입에 묻은 아이스크림을 쓱 닦았다.</p>
+            <p>“응. 아까부터 쳐다보고 있었잖아?”</p>
+            <p>잘생겼길래 힐끗힐끗 쳐다봤는데 눈치챘나 보다.</p>
+            <p>“아뇨, 전 괜찮아요. 풍선껌 별로 안 좋아해서….”</p>
+            <p>최대한 정중하게 이 자리를 뜨고 싶었으나, 그는 포기를 몰랐다.</p>
+            <p>“그럼 한 개 그냥 줄게. 맛만 봐.”</p>
+            <p>거절할 새도 없이 남자는 포장지를 벗겨서 껌을 들이밀었다. 진한 복숭아향이 진동했다.</p>
+            <p>“자. 어서.”</p>
+            <p>어쩔 수 없이 받아든 풍선껌은 금세 먹던 메로나와 함께 어우러져 입안에서 오묘한 맛을 만들어냈다. 복숭아맛 메로나랄까. 물론 이 복숭아는 흙과 햇빛, 물 그 어느 것 하나 만나보지 못한 실험실 출신의 복숭아였다. 그렇게 생각하니까 뒷맛이 씁쓸했다. 실험실에서 태어난 건 이 복숭아의 탓이 아닐 텐데.</p>
+            <p>“아까 봤는데 철권 잘하더라.”</p>
+            <p>남자가 웃으며 말했다.</p>
+            <p>다년간의 경험을 통해 터득한 요령이었다. 짓궂은 동네 꼬마들은 오락기 앞으로. 분식집 앞에서부터 나를 알아보고 쫓아오는 탓에 오랜만에 동전을 좀 썼다. 오늘따라 손목이 자유자재길래 신나게 이겨 먹은 걸 다 봤나보다.</p>
+            <p>“그냥 좀, 하하.”</p>
+            <p>“여기 중학교 다녀?”</p>
+            <p>남자는 문방구 건너편에 보이는 학교 정문을 가리켰다.</p>
+            <p>“네.”</p>
+            <p>고개를 끄덕이자 그는 반색을 했다.</p>
+            <p>“이야, 이거 후배 님을 몰라봤네! 나도 이 중학교 출신이야. 졸업한 지는 꽤 됐지만.”</p>
+            <p>그는 손을 내밀었다.</p>
+            <p>“이렇게 만나게 돼서 반가워, 꼬마 아가씨.”</p>
+            <p>꽤 능수능란한 잡상인이다. 그는 학연을 통해 풍선껌 판매를 시도하려는 듯 보였다.</p>
+            <p>“후배님, 혹시 이거 필요없어? 필기할 때 쓰면 완전 편한데. 새로 나온 펜인데, 가격도 단돈-”</p>
+            <p>“저, 그럼 전 이만 가볼게요.”</p>
+            <p>남자가 본격적으로 세일즈를 시작하려는 듯하길래 서둘러 몸을 돌리는 순간, 무언가가 주머니에서 툭, 하고 떨어졌다. 굽힐 새도 없이 남자가 먼저 주워들었다.</p>
+            <p>“어, 떨어뜨렸다.”</p>
+            <p>남자의 눈길이 떨어뜨린 명찰에 머물렀다. 그에게서 명찰을 받아드는 순간, 남자의 표정에 무언가가 스치고 지나갔다. 그게 무엇을 의미하는지 알고 있었다. 뭐, 때로는 대놓고 놀리는 동네 꼬마들이 나았다. 철권이라도 맥일 수 있으니까.</p>
+            <p>“감사합니다.”</p>
+            <p>“잠깐만.”</p>
+            <p>무언가가 내 손에 쥐어졌다.</p>
+            <p>풍선껌이었다. 이미 뜯어진 채로, 작은 통 안에는 포장된 껌이 다섯 개 남아 있었다.</p>
+            <p>“저기, 전 별로 살 생각이 없다니까요.”</p>
+            <p>뜯어져 있는 데다가 꽤 오래된 것 같아 인상이 찌푸려졌다.</p>
+            <p>“풍선껌 불 줄 알아?”</p>
+            <p>남자가 말했다. 그는 잘생긴 얼굴로 싱긋 웃었다.</p>
+            <p>“불어 봐. 그럼 소원이 이루어진다.”</p>
+            <p>알 수 없는 말을 남기고 그는 위풍당당하게 자신의 영업장으로 돌아갔다.</p>
+            <p>　</p>
+            <p class = "rightAlign">다음 페이지에서 계속 →</p>
+            <div class ="marginMobile"></div>
+        </div>
+        <div class = "marginPC"></div>
+    </body>
+</html>
