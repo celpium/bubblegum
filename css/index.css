@@ -23,13 +23,20 @@ html, body{
     -o-text-size-adjust: none;
 }
 @media(max-width: 1200px){
-    p, div.bubblePop, img.bubble{
+    p{
         -ms-user-select: none;
         -moz-user-select: none;
         -webkit-user-select: none;
         -o-user-select: none;
         user-select: none;
     }
+}
+div.bubblePop, img.bubble{
+    -ms-user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -o-user-select: none;
+    user-select: none;
 }
 body {
     margin: 0rem;
