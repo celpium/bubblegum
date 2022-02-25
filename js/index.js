@@ -266,9 +266,6 @@ $(document).ready(function(){
     $('img.bubble').mousedown(function(){
         $(this).animate({width: RPConverter(24), height: RPConverter(24)}, 800, 'linear');
     });
-    $('img.bubble').on('touchstart', function(){
-        $(this).animate({width: RPConverter(24), height: RPConverter(24)}, 800, 'linear');
-    });
     $('img.bubble').mouseup(function(){
         $(this).stop();
         if($(this).width() >= RPConverter(20)){
@@ -280,16 +277,16 @@ $(document).ready(function(){
             pop();
         };
     });
-    $('img.bubble').on('touchend', function(){
-        $(this).stop();
-        if($(this).width() >= RPConverter(20)){
+    $('img.bubble').on('touchstart', function(){
+        $(this).animate({width: RPConverter(24), height: RPConverter(24)}, 800, 'linear');
+        setTimeout(function(){
             $(this).hide();
             $(this).siblings('img.pop').show();
             setTimeout(function(){
                 $('img.pop').hide();
             }, 800);
             pop();
-        };
+        }, 800);
     });
 });
 function mainButton(self){
