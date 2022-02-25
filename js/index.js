@@ -14,7 +14,17 @@ function pop(){
     $('input.mainButton').css('background-size', '1.6rem');
     $('input.mainButton').css('filter', 'none');
 }
+function mainButton(self){
+    if(self.value === 'bubble'){
+        self.value = 'pop';
+        $('img.bubble').hide();
+        pop();
+    }
+}
 $(document).ready(function(){
+    document.addEventListener("contextmenu", e => {
+        e.target.matches("img") && e.preventDefault()
+    });
     var gif = './img/obje.gif';
     var obje = ['./img/kim1.png', './img/ha1.png', './img/ha2.png', './img/ha3.png',
     './img/ha4.png', './img/ha5.png', './img/lee1.png', './img/lee2.png', 
@@ -257,11 +267,4 @@ $(document).ready(function(){
             pop();
         };
     });
-});
-function mainButton(self){
-    if(self.value === 'bubble'){
-        self.value = 'pop';
-        $('img.bubble').hide();
-        pop();
-    }
-}
+})
