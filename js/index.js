@@ -15,10 +15,6 @@ function pop(){
     $('input.mainButton').css('filter', 'none');
 }
 $(document).ready(function(){
-    document.addEventListener("contextmenu", e => {
-        e.target.matches("img") && e.preventDefault()
-    });
-$(document).ready(function(){
     var gif = './img/obje.gif';
     var obje = ['./img/kim1.png', './img/ha1.png', './img/ha2.png', './img/ha3.png',
     './img/ha4.png', './img/ha5.png', './img/lee1.png', './img/lee2.png', 
