@@ -40,6 +40,7 @@ div.bubblePop, img.bubble{
 }
 body {
     margin: 0rem;
+    -webkit-touch-callout: none;
 }
 html{
     -ms-overflow-style: none; /* IE and Edge */
