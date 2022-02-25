@@ -45,10 +45,10 @@ function pop(){
     $('input.mainButton').css('background-size', '1.6rem');
     $('input.mainButton').css('filter', 'none');
 }
-$(document).ready(function(){
-    document.addEventListener("contextmenu", e => {
-        e.target.matches("img") && e.preventDefault()
-    });
+// $(document).ready(function(){
+//     document.addEventListener("contextmenu", e => {
+//         e.target.matches("img") && e.preventDefault()
+//     });
     var gif = './img/obje.gif';
     var obje = ['./img/kim1.png', './img/ha1.png', './img/ha2.png', './img/ha3.png',
     './img/ha4.png', './img/ha5.png', './img/lee1.png', './img/lee2.png', 
@@ -266,6 +266,9 @@ $(document).ready(function(){
     $('img.bubble').mousedown(function(){
         $(this).animate({width: RPConverter(24), height: RPConverter(24)}, 800, 'linear');
     });
+    $('img.bubble').on('touchstart', function(){
+        $(this).animate({width: RPConverter(24), height: RPConverter(24)}, 800, 'linear');
+    });
     $('img.bubble').mouseup(function(){
         $(this).stop();
         if($(this).width() >= RPConverter(20)){
@@ -277,17 +280,16 @@ $(document).ready(function(){
             pop();
         };
     });
-    $('img.bubble').on('touchstart', function(){
-        $(this).css('filter', 'none');
-        $(this).animate({width: RPConverter(24), height: RPConverter(24)}, 800, 'linear');
-        setTimeout(function(){
+    $('img.bubble').on('touchend', function(){
+        $(this).stop();
+        if($(this).width() >= RPConverter(20)){
             $(this).hide();
             $(this).siblings('img.pop').show();
             setTimeout(function(){
                 $('img.pop').hide();
             }, 800);
             pop();
-        }, 800);
+        };
     });
 });
 function mainButton(self){
