@@ -1,34 +1,3 @@
-document.onkeydown = keyCheckOn;
-document.onkeyup = keyCheckOff;
-document.onmousedown = click;
-var keyDownCtrl = 0;
-var keyDownShift = 0;
-function keyCheckOn(){
-    switch(event.keyCode){
-        case 123: event.keyCode = '';
-        return false;
-        break;
-        case 17: event.keyCode = '';
-        keyDownCtrl = 1;
-        return false;
-        break;
-    }
-    if(keyDownCtrl){
-        return false;
-    }
-}
-function keyCheckOff(){
-    if(event.keyCode == 17){
-        keyDownCtrl = 0;
-    }else if(event.keyCode == 16){
-        keyDownShift = 0;
-    }
-}
-function click(){
-    if((event.button == 2) || (event.button == 2)){
-        alert('마우스 오른쪽 클릭, Ctrl 키, Shift 키, F12 키는 작동하지 않습니다.');
-    }
-}
 var isTouchDevice = (navigator.maxTouchPoints || 'ontouchstart' in document.documentElement);
 function RPConverter(remUnit){
     return remUnit * parseFloat(getComputedStyle(document.documentElement).fontSize);
@@ -45,10 +14,11 @@ function pop(){
     $('input.mainButton').css('background-size', '1.6rem');
     $('input.mainButton').css('filter', 'none');
 }
-// $(document).ready(function(){
-//     document.addEventListener("contextmenu", e => {
-//         e.target.matches("img") && e.preventDefault()
-//     });
+$(document).ready(function(){
+    document.addEventListener("contextmenu", e => {
+        e.target.matches("img") && e.preventDefault()
+    });
+$(document).ready(function(){
     var gif = './img/obje.gif';
     var obje = ['./img/kim1.png', './img/ha1.png', './img/ha2.png', './img/ha3.png',
     './img/ha4.png', './img/ha5.png', './img/lee1.png', './img/lee2.png', 
