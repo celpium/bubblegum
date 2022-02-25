@@ -278,15 +278,14 @@ $(document).ready(function(){
         };
     });
     $('img.bubble').on('touchstart', function(){
+        $(this).css('filter', 'none');
         $(this).animate({width: RPConverter(24), height: RPConverter(24)}, 800, 'linear');
-        setTimeout(function(){
             $(this).hide();
             $(this).siblings('img.pop').show();
             setTimeout(function(){
                 $('img.pop').hide();
             }, 800);
             pop();
-        }, 800);
     });
 });
 function mainButton(self){
