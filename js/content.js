@@ -36,9 +36,9 @@ $(document).ready(function(){
 			console.log('up');
 			$('div.content').scrollLeft(-wheelDelta + $('div.content').scrollLeft());
 		}else if(wheelDelta < 0){
-		    console.log('down');
+		    	console.log('down');
 			$('div.content').scrollLeft(-wheelDelta + $('div.content').scrollLeft());
-        }
+        	}
 	});
 });
 function PRConverter(pixelUnit){
