@@ -40,14 +40,6 @@ $(document).ready(function(){
 			$('div.content').scrollLeft(-wheelDelta + $('div.content').scrollLeft());
         }
 	});
-    $('div.content').scroll(function(){
-        $('div.marginPC').scrollTop($('div.content').scrollTop());
-        $('div.marginPC').scrollLeft($('div.content').scrollLeft());
-    });
-    $('div.marginPC').scroll(function(){
-        $('div.content').scrollTop($('div.marginPC').scrollTop());
-        $('div.content').scrollLeft($('div.marginPC').scrollLeft());
-    });
 });
 function PRConverter(pixelUnit){
     return pixelUnit / parseFloat(getComputedStyle(document.documentElement).fontSize);
