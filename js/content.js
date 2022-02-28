@@ -1,34 +1,34 @@
-document.onkeydown = keyCheckOn;
-document.onkeyup = keyCheckOff;
-document.onmousedown = click;
-var keyDownCtrl = 0;
-var keyDownShift = 0;
-function keyCheckOn(){
-    switch(event.keyCode){
-        case 123: event.keyCode = '';
-        return false;
-        break;
-        case 17: event.keyCode = '';
-        keyDownCtrl = 1;
-        return false;
-        break;
-    }
-    if(keyDownCtrl){
-        return false;
-    }
-}
-function keyCheckOff(){
-    if(event.keyCode == 17){
-        keyDownCtrl = 0;
-    }else if(event.keyCode == 16){
-        keyDownShift = 0;
-    }
-}
-function click(){
-    if((event.button == 2) || (event.button == 2)){
-        alert('마우스 오른쪽 클릭, Ctrl 키, Shift 키, F12 키는 작동하지 않습니다.');
-    }
-}
+// document.onkeydown = keyCheckOn;
+// document.onkeyup = keyCheckOff;
+// document.onmousedown = click;
+// var keyDownCtrl = 0;
+// var keyDownShift = 0;
+// function keyCheckOn(){
+//     switch(event.keyCode){
+//         case 123: event.keyCode = '';
+//         return false;
+//         break;
+//         case 17: event.keyCode = '';
+//         keyDownCtrl = 1;
+//         return false;
+//         break;
+//     }
+//     if(keyDownCtrl){
+//         return false;
+//     }
+// }
+// function keyCheckOff(){
+//     if(event.keyCode == 17){
+//         keyDownCtrl = 0;
+//     }else if(event.keyCode == 16){
+//         keyDownShift = 0;
+//     }
+// }
+// function click(){
+//     if((event.button == 2) || (event.button == 2)){
+//         alert('마우스 오른쪽 클릭, Ctrl 키, Shift 키, F12 키는 작동하지 않습니다.');
+//     }
+// }
 $(document).ready(function(){
     $('div.content').on('mousewheel', function(self){
 		var wheelDelta = self.originalEvent.wheelDelta;
