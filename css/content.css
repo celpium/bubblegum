@@ -203,7 +203,7 @@ span.smaller{
     div.marginMobile{
         display: none;
     }
-    div.marginPC:nth-child(1){
+    div.marginPC{
         height: 3.2rem;
     }
     div.marginPC:nth-child(2){
