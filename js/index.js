@@ -242,6 +242,7 @@ $(document).ready(function(){
     $('a.main').mouseout(function(){
         $('div.obje').css('background', 'url(' + gif + ') no-repeat center center');
         $('div.obje').css('background-size', 'contain');
+        $('div.obje').css('filter', 'none');
     });
     if(isTouchDevice){
         $('img.bubble').on('touchstart', function(){
